@@ -1,0 +1,83 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script src="static/js/libs/md5/md5.js"></script>
+		<script src="static/js/libs/bcrypt/bcrypt.js"></script>
+
+		<script src="static/js/ascii.js"></script>
+		<script src="static/js/apikey.js"></script>
+		<script src="static/js/binary.js"></script>
+		<script src="static/js/popup.js"></script>
+	</head>
+
+	<body>
+		<div id="content" class="content">
+			<input type="checkbox" class="click-toggle" id="apikey"/> 
+			<label class="center-text click-toggle-label" id="apikey" name="apikey" for="apikey">API Key</label>
+			<div class="click-toggle-content" id="apikey_content">
+				<input type="text" id="txtApiKey" placeholder="API Key"/>
+				<button id="btnGenerateApiKey" class="material-button">Generate</button>
+			</div>
+		
+			<input type="checkbox" class="click-toggle" id="color"/> 
+			<label class="center-text click-toggle-label" id="color" name="color" for="color">Check Color</label>
+			<div class="click-toggle-content" id="color_content">
+				<input type="text" id="txtColorHex" placeholder="Hex"/>
+				<input type="color" id="txtColor">
+				<button id="btnGenerateColor" class="material-button">Color</button>
+			</div>
+
+			<input type="checkbox" class="click-toggle" id="ascii"/> 
+			<label class="center-text click-toggle-label" id="ascii" name="ascii" for="ascii">Hex to ASCII</label>
+			<div class="click-toggle-content" id="ascii_content">
+				<input type="text" id="txtHex" placeholder="Hex"/>
+				<input type="text" id="txtAscii" placeholder="ASCII"/>
+				<button id="btnGenerateAscii" class="material-button">ASCII</button>
+			</div>
+		
+			<input type="checkbox" class="click-toggle" id="md5"/> 
+			<label class="center-text click-toggle-label" id="md5" name="md5" for="md5">Text to MD5</label>
+			<div class="click-toggle-content" id="md5_content">
+				<input type="text" id="txtRawMd5" placeholder="Text"/>
+				<input type="text" id="txtMd5" placeholder="MD5"/>
+				<button id="btnGenerateMd5" class="material-button">MD5</button>
+			</div>
+		
+			<input type="checkbox" class="click-toggle" id="bcrypt"/> 
+			<label class="center-text click-toggle-label" id="bcrypt" name="bcrypt" for="bcrypt">Text to BCrypt</label>
+			<div class="click-toggle-content" id="bcrypt_content">
+				<input type="text" id="txtRawBcrypt" placeholder="Text"/>
+				<input type="number" id="txtRoundsBcrypt" value="12" placeholder="Rounds"/>
+				<input type="text" id="txtBcrypt" placeholder="BCrypt"/>
+				<button id="btnGenerateBcrypt" class="material-button">BCrypt</button>
+			</div>
+
+			<input type="checkbox" class="click-toggle" id="binary"/> 
+			<label class="center-text click-toggle-label" id="binary" name="binary" for="binary">Text to Binary</label>
+			<div class="click-toggle-content" id="binary_content">
+				<input type="text" id="txtRawBinary" placeholder="Text"/>
+				<input type="text" id="txtBinary" placeholder="Binary"/>
+				<button id="btnGenerateBinary" class="material-button">Binary</button>
+			</div>
+
+			<input type="checkbox" class="click-toggle" id="binarytext"/> 
+			<label class="center-text click-toggle-label" id="binarytext" name="binarytext" for="binarytext">Binary to Text</label>
+			<div class="click-toggle-content" id="binarytext_content">
+				<input type="text" id="txtRawBinaryText" placeholder="Binary"/>
+				<input type="text" id="txtBinaryText" placeholder="Text"/>
+				<button id="btnGenerateBinaryText" class="material-button">Text</button>
+			</div>
+		
+			<input type="checkbox" class="click-toggle" id="short"/> 
+			<label class="center-text click-toggle-label" id="short" name="short" for="short">URL Shortener</label>
+			<div class="click-toggle-content" id="short_content">
+				<input type="text" id="txtUrl" placeholder="URL"/>
+				<input type="text" id="txtShortUrl" placeholder="Shorten URL"/>
+				<button id="btnGenerateShortUrl" class="material-button">URL</button>
+			</div>
+		</div>
+
+		<link rel="stylesheet" href="static/css/popup.css">
+	</body>
+</html>

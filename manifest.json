@@ -1,0 +1,21 @@
+{
+  "name": "Generators",
+  "short_name": "Generators",
+  "version": "0.3",
+  "description": "A Google Chrome extension to generate api key, shorten url, convert ascii to hex, text to binary and binary to text, check color hex and encrypt to MD5 and BCrypt",
+  "author": "Giovani de Oliveira <giovanioliveira@outlook.com.br>",
+  "manifest_version": 2,
+  "icons": { 
+    "16": "src/static/images/icons/icon16.png", 
+    "48": "src/static/images/icons/icon48.png", 
+    "128": "src/static/images/icons/icon128.png" 
+  },
+  "browser_action": {
+    "default_title": "Generators",
+    "default_popup": "src/popup.html",
+    "default_icon": "src/static/images/icons/icon128.png"
+  },
+  "permissions": [
+    "https://*/"
+  ]
+}
