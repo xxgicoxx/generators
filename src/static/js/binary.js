@@ -6,7 +6,6 @@
             result += text[i].charCodeAt(0).toString(2) + " ";
         }
 
-        console.log(result);
         return result;
     }
 
