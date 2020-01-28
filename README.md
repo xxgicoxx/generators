@@ -1,5 +1,5 @@
 # Generators
-A Google Chrome extension to generate api key, shorten url, convert ascii to hex, text to binary and binary to text, check color hex and encrypt to MD5 and BCrypt.
+Google Chrome extension to generate api key, shorten url, convert ascii to hex, text to binary and binary to text, check color hex and encrypt to MD5 and BCrypt.
 
 ![Menu](https://i.imgur.com/kG22sqq.png)
 
