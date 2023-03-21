@@ -36,69 +36,69 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-generateApiKey = () => {
+generateApiKey = async () => {
     txtApiKey.value = apikey();
-    document.getElementById("txtApiKey").select();
-    document.execCommand('copy');
+
+    await copyTextToClipboard(txtApiKey.value);
 }
 
 checkColor = () => {
-    if(txtColorHex.value.startsWith('#')) {
-        txtColor.value = txtColorHex.value;
-    } else {
-        txtColor.value = `#${txtColorHex.value}`;
-    }
+    txtColor.value = txtColorHex.value.startsWith('#') ? txtColorHex.value :  `#${txtColorHex.value}`;
 }
 
-getColor = () => {
+getColor = async () => {
     txtColorHex.value = txtColor.value;
-    document.getElementById("txtColorHex").select();
-    document.execCommand('copy');
+
+    await copyTextToClipboard(txtColorHex.value);
 }
 
-hex2ascii = () => {    
+hex2ascii = async () => {    
     txtAscii.value = ascii(txtHex.value);
-    document.getElementById("txtAscii").select();
-    document.execCommand('copy');
+
+    await copyTextToClipboard(txtAscii.value);
 }
 
-text2Md5 = () => {    
+text2Md5 = async () => {    
     txtMd5.value = md5(txtRawMd5.value);
-    document.getElementById("txtMd5").select();
-    document.execCommand('copy');
+
+    await copyTextToClipboard(txtMd5.value);
 }
 
-text2Bcrypt = () => {
+text2Bcrypt = async () => {
     txtBcrypt.value = dcodeIO.bcrypt.hashSync(txtRawBcrypt.value, parseInt(txtRoundsBcrypt.value) || 12);
-    document.getElementById("txtBcrypt").select();
-    document.execCommand('copy');
+    
+    await copyTextToClipboard(txtBcrypt.value);
 }
 
-text2Binary = () => {
+text2Binary = async () => {
     txtBinary.value = textToBinary(txtRawBinary.value);
-    document.getElementById("txtBinary").select();
-    document.execCommand('copy');
+   
+    await copyTextToClipboard(txtBinary.value);
 }
 
-binary2Text = () => {
+binary2Text = async () => {
     txtBinaryText.value = binaryToText(txtRawBinaryText.value);
-    document.getElementById("txtBinaryText").select();
-    document.execCommand('copy');
+
+    await copyTextToClipboard(txtBinaryText.value);
 }
 
-shortUrl = () => {
+shortUrl = async () => {
     const request = new XMLHttpRequest();
     
-    request.onreadystatechange = function() {
+    request.onreadystatechange = async function() {
         if(request.readyState === 4) {
             if(request.status === 200) { 
                 txtShortUrl.value = request.responseText;
-                document.getElementById("txtShortUrl").select();
-                document.execCommand('copy');
+
+                await copyTextToClipboard(txtShortUrl.value);
             }
         }
     }
 
     request.open('GET', `https://is.gd/create.php?format=simple&url=${txtUrl.value}`);    
     request.send();
+}
+
+copyTextToClipboard = async (text) => {
+    await navigator.clipboard.writeText(text);
 }
