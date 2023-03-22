@@ -21,13 +21,13 @@ The application run locally, just package and use.
 ### 1. Run
 ```
 # Open Google Chrome extensions
-At the top right, turn on Developer mode
+At the top right, turn on Developer mode.
 
 # Load
-Click Load unpacked
+Click Load unpacked.
 
 # Select
-Find and select the Generators folder
+Find and select the Generators folder.
 ```
 
 ### 2. Build
